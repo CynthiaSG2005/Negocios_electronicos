@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","on-error-container":"#93000a","background":"#f7f9ff","on-primary-fixed-variant":"#0e5138","tertiary":"#5a4400","on-secondary-fixed":"#001e2f","primary-fixed":"#b1f0ce","outline":"#707973","tertiary-container":"#775b06","surface":"#f7f9ff","on-background":"#181c20","on-tertiary-fixed":"#251a00","inverse-surface":"#2d3135","on-secondary":"#ffffff","on-surface":"#181c20","primary-fixed-dim":"#95d4b3","primary-container":"#2d6a4f","on-tertiary-fixed-variant":"#5a4400","on-tertiary-container":"#fcd579","surface-variant":"#e0e3e8","primary":"#0f5238","secondary-fixed":"#c9e6ff","on-secondary-container":"#37627f","on-primary-container":"#a8e7c5","outline-variant":"#bfc9c1","surface-container-high":"#e5e8ee","on-secondary-fixed-variant":"#1d4b67","tertiary-fixed-dim":"#e7c268","secondary-container":"#b2dcfe","error-container":"#ffdad6","tertiary-fixed":"#ffdf96","error":"#ba1a1a","surface-container-highest":"#e0e3e8","secondary":"#386380","inverse-primary":"#95d4b3","on-surface-variant":"#404943","surface-dim":"#d7dadf","surface-container-low":"#f1f4f9","surface-tint":"#2c694e","surface-container":"#ebeef3","on-primary-fixed":"#002114","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","secondary-fixed-dim":"#a1cced","on-primary":"#ffffff","surface-bright":"#f7f9ff","inverse-on-surface":"#eef1f6"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","gutter-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem"},fontFamily:{"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside aria-label="Navegación Principal de la Plataforma" class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Smart Clean-Tech Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBlq62Q69bgr4Kj3pmaKNgQQryIyyPV49U83ie_45WkWgjmEbk8gIsuExDGx6dZj_uO2L4sLzlm72CmnAW6jWdPHzPQTKg_GLc7DI_t7dVsa1PhNRjvjuM0u7eY0heIt-DO2ia7mtCQoCNAfgGBLhVB4WYzcrium9kWsDTtSbfhxnYb-yqZpuieKV3WlK8s7ZBVKGm3opKs527NMVqVmS5ldbjeXrRHJa-pYTJF7oqz"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Ecosphere</span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase mt-space-xs">BI &amp; CRM Hardware</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Consola Operativa</div></div><nav aria-label="Menú del Sistema" class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="crm-ventas" href="#"><span class="material-symbols-outlined text-secondary text-xl">group_work</span><span>CRM &amp; Ventas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="catalogo-smart-bin-ia" href="#"><span class="material-symbols-outlined text-secondary text-xl">inventory_2</span><span>Catálogo &amp; Smart Bin IA</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary-container font-title-md" data-path="servicios-de-mantenimiento" href="#"><span class="material-symbols-outlined text-secondary text-xl">build_circle</span><span>Servicios de Mantenimiento</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="gestion-de-pedidos-checkout" href="#"><span class="material-symbols-outlined text-secondary text-xl">shopping_cart_checkout</span><span>Gestión de Pedidos &amp; Checkout</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bi-metricas-de-reciclaje" href="#"><span class="material-symbols-outlined text-secondary text-xl">analytics</span><span>BI &amp; Métricas de Reciclaje</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-md text-label-md text-on-surface">Flota Smart Bin IA</span><span class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">99.4% Online</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Sensores telemétricos e inferencia visual de clasificación activos.</p><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[92%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between gap-space-md" role="banner"><div class="flex-1 max-w-xl"><div class="relative flex items-center w-full"><span aria-hidden="true" class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-xl">search</span><input aria-label="Búsqueda global corporativa de clientes, pedidos y dispositivos Smart Bin" class="w-full h-10 pl-11 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Buscar clientes, pedidos, dispositivos Smart Bin IA..." type="search"/></div></div><div class="flex items-center gap-space-sm"><div aria-label="Herramientas de Accesibilidad Universal" class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]" role="group"><button aria-label="Activar modo de alto contraste para visibilidad en planta" class="h-8 w-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Alto Contraste WCAG AAA" type="button"><span aria-hidden="true" class="material-symbols-outlined text-lg">contrast</span></button><button aria-label="Ajustar tamaño de fuente de la interfaz" class="h-8 w-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Tamaño de Texto Adaptativo" type="button"><span aria-hidden="true" class="material-symbols-outlined text-lg">format_size</span></button><button aria-label="Asistente de lectura de pantalla y síntesis de voz" class="h-8 w-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Lector de Pantalla Asistido" type="button"><span aria-hidden="true" class="material-symbols-outlined text-lg">hearing</span></button></div><div aria-hidden="true" class="h-6 w-px bg-surface-variant mx-space-xs"></div><button aria-label="Notificaciones del sistema: 3 alertas telemétricas de sensores" class="relative h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-colors" type="button"><span aria-hidden="true" class="material-symbols-outlined text-xl">notifications</span><span aria-hidden="true" class="absolute top-2 right-2 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden lg:flex"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Elena Domínguez</span><span class="font-label-sm text-label-sm text-secondary font-medium">Gerente de Operaciones &amp; BI</span></div><button aria-label="Menú de perfil de usuario corporativo" class="flex items-center gap-space-xs rounded-full focus:outline-none focus:ring-2 focus:ring-secondary" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAANJb_z7quBMmCX7R2OmOGBAabe4eGNBFTGzmGj-uqh2poy50UWTAa6495YEcfsa4b4M5SRxukcRmwwK9XoonRU5-ij1evO6w0vPWx1WJ2FbeHhKOr96Ln1Lhk1CbKKa_Q_ou0qHCKkN75fjccgfC1cizrgdEDGVDo6meHVYoLqJB1aRbCL_aSWh1q3H0Xc579PzibhnMMKf1gCzSfbbWVyhgtFMaACZ4OwYDNPuw"/></button></div></div></header><main class="w-full pt-16 bg-surface px-gutter py-space-lg min-h-screen"><div class="flex flex-col w-full gap-space-xl">
+<!-- Top Banner / Transparency Header -->
+<section class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-xl shadow-sm">
+<div aria-hidden="true" class="absolute -right-16 -top-16 h-72 w-72 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none"></div>
+<div aria-hidden="true" class="absolute -left-12 -bottom-12 h-64 w-64 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-lg">
+<div class="max-w-3xl flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-base">verified</span>
+            Ingeniería Certificada EcoSphere Hardware
+          </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md">
+            SLA Industrial: 99.8% Disponibilidad
+          </span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-xs">
+          Servicio Técnico Especializado &amp; Mantenimiento Preventivo para Smart Bin IA
+        </h2>
+<div class="flex items-start gap-space-sm mt-space-sm p-space-md rounded-lg bg-surface-container-low text-on-surface-variant">
+<span aria-hidden="true" class="material-symbols-outlined text-primary text-xl mt-0.5">info</span>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+<strong class="font-title-md text-on-surface">Compromiso ético y autonomía del cliente:</strong> 
+            Este es un servicio complementario no obligatorio. Tú decides libremente cuándo, cómo y con qué nivel de cobertura cuidar tus equipos. Nuestros contenedores inteligentes mantienen su garantía estándar de fábrica independientemente del plan contratado.
+          </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row lg:flex-col gap-space-sm shrink-0 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-3 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-all" href="#solicitud-reparacion">
+<span class="material-symbols-outlined text-lg">home_repair_service</span>
+          Reportar Incidencia o Falla
+        </a>
+<a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-colors" href="#catalogo-repuestos">
+<span class="material-symbols-outlined text-lg">precision_manufacturing</span>
+          Ver Despiece &amp; Refacciones
+        </a>
+</div>
+</div>
+</section>
+<!-- Service Plans Section -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Nivel de Cobertura Modular</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Planes de Servicio y Mantenimiento</h3>
+</div>
+<div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-high">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest font-label-sm text-label-sm text-on-surface shadow-sm transition-all" id="btn-billing-anual" type="button">Facturación Anual (-15%)</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="btn-billing-evento" type="button">Facturación por Evento</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Plan 1: Bajo Demanda -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Flexibilidad Cero Compromiso</span>
+<span class="material-symbols-outlined text-secondary text-2xl">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Bajo Demanda</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Intervención puntual para instalaciones individuales o proyectos en fase piloto.</p>
+</div>
+<div class="py-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">$149</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ incidente + repuestos</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Diagnóstico técnico in situ o remoto según viabilidad</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Cambio de servomotores y recalibración de cámara óptica</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Garantía de mano de obra de 90 días naturales</span>
+</li>
+<li class="flex items-start gap-space-sm text-outline">
+<span class="material-symbols-outlined text-outline-variant text-base mt-0.5">cancel</span>
+<span class="line-through">Monitoreo continuo de salud de sensores</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-2.5 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-colors" type="button">
+            Solicitar Servicio Puntual
+          </button>
+</div>
+</div>
+<!-- Plan 2: Preventivo Anual (Highlighted) -->
+<div class="relative flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-md transition-all hover:shadow-xl ring-2 ring-primary">
+<span class="absolute -top-3 left-1/2 -translate-x-1/2 px-space-md py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider shadow-sm">
+          Más Recomendado para Flotas
+        </span>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Ciclo Bi-anual Integral</span>
+<span class="material-symbols-outlined text-primary text-2xl">verified_user</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Preventivo Anual</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Garantiza precisión en la clasificación y vida útil óptima de los mecanismos.</p>
+</div>
+<div class="py-space-sm">
+<span class="font-display-lg text-display-lg text-primary">$38</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ bin al mes (facturado anualmente)</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span><strong>2 revisiones integrales por año</strong> con reporte de degradación</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Limpieza ultrasónica de lentes y sensores infrarrojos</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span><strong>Actualización de modelos ML</strong> para detección de nuevos empaques y envases</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-base mt-0.5">check_circle</span>
+<span>Reemplazo preventivo incluido de filtros HEPA, sellos y engranes</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity" type="button">
+            Contratar Plan Preventivo
+          </button>
+</div>
+</div>
+<!-- Plan 3: Enterprise Care -->
+<div class="flex flex-col justify-between rounded-xl bg-surface-container-lowest p-space-lg shadow-sm transition-all hover:shadow-md">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Máxima Disponibilidad</span>
+<span class="material-symbols-outlined text-secondary text-2xl">hub</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Enterprise Care</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Diseñado para aeropuertos, centros corporativos y plantas de manufactura continua.</p>
+</div>
+<div class="py-space-sm">
+<span class="font-display-lg text-display-lg text-on-surface">$72</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ bin al mes (SLA crítico)</span>
+</div>
+<ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span><strong>Soporte 24/7 in situ</strong> con cuadrilla de emergencia</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span><strong>Recambio garantizado de piezas en menos de 24h</strong></span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span>Telemetría continua remota de vibración, temperatura y par motor</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-base mt-0.5">check_circle</span>
+<span>Reposición de equipo completo por daño catastrófico sin coste adicional</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg">
+<button class="w-full py-2.5 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg hover:opacity-95 transition-opacity" type="button">
+            Consultar Acuerdo Corporativo
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Visual Diagnostic / Fleet Status Overview -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center rounded-xl bg-surface-container-low p-space-lg">
+<div class="lg:col-span-4 flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Salud Operativa Global</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Telemetría de la Flota &amp; Diagnóstico IA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        El sistema de machine learning integrado audita en tiempo real el ciclo de vida de cada actuador y transductor, sugiriendo mantenimientos antes de que ocurra una interrupción.
+      </p>
+<div class="flex items-center gap-space-md pt-space-xs">
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface">Salud Óptima (88%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="h-3 w-3 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Preventivo Próximo (10%)</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Metric 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-md text-label-md">Visión Artificial</span>
+<span class="material-symbols-outlined text-lg">photo_camera</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface">99.4%</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lentes sin aberración ni polvo</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[99%]"></div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-md text-label-md">Servomotores</span>
+<span class="material-symbols-outlined text-lg">precision_manufacturing</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface">1.2M</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aperturas sin descalibración</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[94%]"></div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-tertiary">
+<span class="font-label-md text-label-md">Tiempo de Respuesta</span>
+<span class="material-symbols-outlined text-lg">timer</span>
+</div>
+<div class="my-space-sm">
+<div class="font-headline-md text-headline-md text-on-surface">3.4 hrs</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Media de atención en sitio</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-container h-full w-[78%]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Parts Catalog Section -->
+<section class="flex flex-col gap-space-lg" id="catalogo-repuestos">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Transparencia Radical en Precios</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Catálogo de Repuestos &amp; Piezas Originales</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+        Precios públicos sin sobrecostos ocultos. Componentes con trazabilidad serializada y certificación de eficiencia energética para Smart Bin IA.
+      </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Part 1: Optical Module -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="h-full w-full object-cover" data-alt="High-tech industrial optical camera module for an AI waste sorting bin with coated glass lens and matte metal protective chassis in clean professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQJpkVWxHeZYnNYEregmOgAKtV_RxlYiw8iFfpd3eipZNzqCvup3ZkNwX844VsKx-YuMghyodw8d1pKIypr-IKuu3faIWdZGo2YrTqChBkQ77rYUy6Yg7xvU-uERUfWrSfn3NkaZdEdHDMnVOlP_ngCSowlQqU5TqY9cJycyrkb_pK4Q4EOQf0m8-wbknc4PzMLjwNa4ZtBSPXJVRgvNEqPKIz4OWjGcdw8jJe994"/>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">En Stock (48h)</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SKU: ECO-CAM-4K-AI</span>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Módulo Óptico / Cámara AI 4K</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              Unidad de visión computacional con acelerador NPU integrado de 4 TOPS, lente gran angular antiempañante y sellado IP65.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Precio unitario</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">$280.00</span>
+</div>
+<button aria-label="Añadir Módulo Óptico a la orden de servicio" class="h-9 w-9 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary-container hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Part 2: Servomotors -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="h-full w-full object-cover" data-alt="Compact brushless industrial servo actuator motor with metallic gears designed for automatic sorting waste bin lids in minimalist modern workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNTmn9BwiGsBx00Mza4xiCJoBj4uHsa6dXZqoJKew9pD9rG5thy2rRADrMIuAFk95KLwHoZzECxsJJAr-lfpZvhius9DY_AZUtRHtr3JKe2THHtiLhp0OumBbITJd49BjcmteRJ1aar9zmPR8p-q2KQy_Hu2uALkJyUeb9WaywxQc8y2WgMZcQPrG-eS9EF2KxTFv5cq-AgziRDDkxcysk8FAbjQysLnJf8pvzT5k"/>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">En Stock (24h)</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SKU: ECO-SRV-LOWP</span>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Servomotores de Compuerta</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              Motorreductor brushless de bajo consumo (12V) con engranes de acero templado y ciclo estimado en 2.5 millones de aperturas.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Precio unitario</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">$115.00</span>
+</div>
+<button aria-label="Añadir Servomotores a la orden de servicio" class="h-9 w-9 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary-container hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Part 3: Proximity & Ultrasonic Sensors -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="h-full w-full object-cover" data-alt="Industrial ultrasonic distance and volumetric sensors with high sensitivity dual transducers on modern clean circuit housing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCij41zZMvlTmf7si-S9IjcxMn2EXhOu2DiSiJBd63-5XpCYLPjytxxMS_6lfCO7JYdlw0agnISUd-V6fyGZFOqTNCyanaLwbkl3lvfjtV1EcdFomxi35QqMuJFbXkYZWvolpmUX3FZQBSW_uaSMdyiF_Oh1ZipFZYgizAX8CmlhHKYyFK5s83Sh8IKjnI6nXigfVGspY6XPdenlbqP4EA0v75emON9gYbVwnU8Sw"/>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm">En Stock (24h)</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SKU: ECO-SEN-USPROX</span>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Sensores Ultrasónicos &amp; Proximidad</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              Kit de transductores dobles para medición volumétrica de llenado en tiempo real y detección de manos sin contacto físico.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Precio unitario</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">$85.00</span>
+</div>
+<button aria-label="Añadir Sensores a la orden de servicio" class="h-9 w-9 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary-container hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Part 4: Battery & Power Supply -->
+<div class="flex flex-col rounded-xl bg-surface-container-lowest overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+<div class="h-44 w-full relative overflow-hidden bg-surface-container">
+<img class="h-full w-full object-cover" data-alt="High capacity lithium iron phosphate LiFePO4 backup battery pack in rugged green and dark industrial casing for outdoor clean tech equipment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA17cjUao5-R9bmI6nePxkW23jk2rCdWzqL-vx-Z5IJ-JwKZ8NMBI_M3SkjWpUedwj5QUBzY4GW47mJE9HKqL-PvZbNAUYUY9ANRLdrVpaei-NalEJI08SvDpnR0Gdfim-QQk661Hr5fnqo_5iR59u9CPu-NG8ofoQiuM00XzfIvgrxUDSBkXXVryE_84ZUE1pObIhJvqk8Y2fRKWvmOrWV4ke-MxGC4ue04Qvb_GE"/>
+<span class="absolute top-space-sm right-space-sm px-space-xs py-0.5 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm">Bajo Pedido (72h)</span>
+</div>
+<div class="p-space-md flex flex-col justify-between flex-1 gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">SKU: ECO-PWR-LIFEP4</span>
+<h4 class="font-title-md text-title-md text-on-surface mt-0.5">Batería de Respaldo LiFePO4</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+              Módulo de energía autónomo con regulador solar inteligente, autonomía de hasta 72 horas continuas sin conexión a la red.
+            </p>
+</div>
+<div class="pt-space-sm flex items-center justify-between border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Precio unitario</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">$195.00</span>
+</div>
+<button aria-label="Añadir Batería de Respaldo a la orden de servicio" class="h-9 w-9 rounded-lg bg-surface-container-lowest text-primary hover:bg-primary-container hover:text-on-primary flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Maintenance Request Form with Accessibility Focus -->
+<section class="rounded-xl bg-surface-container-lowest p-space-xl shadow-sm" id="solicitud-reparacion">
+<div class="flex flex-col lg:flex-row gap-space-xl">
+<!-- Left side form guide -->
+<div class="lg:w-1/3 flex flex-col gap-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Atención Técnica Inmediata</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Solicitud Guiada de Reparación</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Diseñado bajo estándares de accesibilidad universal WCAG AAA. Si te encuentras en planta o en piso de operaciones, puedes utilizar el dictado por voz o activar el modo de asistencia técnica asistida.
+        </p>
+<!-- Accessibility Helper Box -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-secondary">accessibility_new</span>
+<span class="font-title-md text-title-md">Asistente Inclusivo Activo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Compatible con lectores NVDA/VoiceOver y teclado numérico unidireccional. Puedes solicitar apoyo en vivo con un clic.
+          </p>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm hover:bg-secondary-fixed transition-colors" id="btn-toggle-large-text" type="button">
+              Texto +20%
+            </button>
+<button class="px-space-sm py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-95 transition-opacity" id="btn-call-human" type="button">
+              Llamada con Especialista
+            </button>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-primary-fixed/20 flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-2xl">security</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Trazabilidad Criptográfica</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Registro inviolable del estado del hardware en cada intervención.</span>
+</div>
+</div>
+</div>
+<!-- Right side form -->
+<form class="lg:w-2/3 flex flex-col gap-space-md" id="form-reparacion" onsubmit="event.preventDefault(); document.getElementById('success-message').classList.remove('hidden');">
+<!-- Client / Smart Bin Identification -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="cliente-id">
+<span>Identificación del Cliente o Empresa</span>
+<span class="font-label-sm text-label-sm text-secondary">*Requerido</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-xl">business</span>
+<input class="w-full h-11 pl-11 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary focus:outline-none" id="cliente-id" placeholder="Ej: logística@aeropuerto-mad.es o CIF" required="" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="bin-serial">
+<span>ID o Número Serial Smart Bin IA</span>
+<span class="font-label-sm text-label-sm text-secondary">*Requerido</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-xl">qr_code_scanner</span>
+<input class="w-full h-11 pl-11 pr-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary focus:outline-none" id="bin-serial" placeholder="Ej: SB-IA-2024-9841" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Failure Category Selector (Buttons) -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Tipo de Anomalía o Falla Detectada</span>
+<div aria-label="Categoría de falla de hardware" class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm" role="radiogroup">
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors has-[:checked]:bg-primary-container has-[:checked]:text-on-primary">
+<input checked="" class="accent-primary h-4 w-4" name="falla-cat" type="radio" value="vision"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Visión / Cámara AI</span>
+<span class="font-label-sm text-label-sm opacity-80">Clasificación errónea u oscurecida</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors has-[:checked]:bg-primary-container has-[:checked]:text-on-primary">
+<input class="accent-primary h-4 w-4" name="falla-cat" type="radio" value="mecanica"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Mecánica / Compuerta</span>
+<span class="font-label-sm text-label-sm opacity-80">Atasco, ruido o servomotor bloqueado</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors has-[:checked]:bg-primary-container has-[:checked]:text-on-primary">
+<input class="accent-primary h-4 w-4" name="falla-cat" type="radio" value="energia"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md">Energía &amp; Sensores</span>
+<span class="font-label-sm text-label-sm opacity-80">Batería baja o sensor volumétrico</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Description with Speech Recognition Button -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="descripcion-falla">
+              Descripción de lo Ocurrido &amp; Comportamiento Anómalo
+            </label>
+<button aria-label="Activar dictado por voz para reporte" class="inline-flex items-center gap-1 text-secondary hover:text-on-surface font-label-sm text-label-sm" id="btn-voice-input" type="button">
+<span class="material-symbols-outlined text-base">mic</span>
+<span id="voice-label">Dictar por Voz</span>
+</button>
+</div>
+<div class="relative">
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary focus:outline-none" id="descripcion-falla" placeholder="Describe brevemente el síntoma. Ej: La compuerta superior tarda en responder tras el escaneo de botellas PET o emite tres pitidos cortos." required="" rows="3"></textarea>
+</div>
+</div>
+<!-- Priority / Urgency Selection -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="select-urgencia">Nivel de Impacto Operativo</label>
+<select class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-secondary focus:outline-none" id="select-urgencia">
+<option value="normal">Normal: Equipo operativo con advertencia menor</option>
+<option value="alto">Alto: Bloqueo de clasificación en zona de alto tránsito</option>
+<option value="critico">Crítico (SLA 4h): Equipo totalmente inoperativo en línea crítica</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="contacto-planta">Teléfono de Enlace en Planta</label>
+<input class="w-full h-11 px-space-md rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:ring-2 focus:ring-secondary focus:outline-none" id="contacto-planta" placeholder="+34 600 000 000 (Opcional para técnico)" type="tel"/>
+</div>
+</div>
+<!-- Feedback & Confirmation Banner (Hidden by default) -->
+<div class="hidden p-space-md rounded-lg bg-primary-fixed text-on-primary-fixed flex items-center justify-between animate-fadeIn" id="success-message">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-2xl">task_alt</span>
+<div>
+<p class="font-title-md text-title-md font-semibold">Incidencia #TK-8924 Registrada con Éxito</p>
+<p class="font-body-sm text-body-sm">Un especialista técnico ha validado la telemetría del Smart Bin. Tiempo estimado de contacto: 18 minutos.</p>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-primary/20" onclick="document.getElementById('success-message').classList.add('hidden')" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Actions -->
+<div class="flex items-center justify-end gap-space-md pt-space-xs">
+<button class="px-space-md py-2.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg" type="reset">
+            Limpiar Formulario
+          </button>
+<button class="inline-flex items-center gap-space-sm px-space-xl py-3 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 transition-opacity" type="submit">
+<span class="material-symbols-outlined text-lg">send</span>
+            Enviar Solicitud al Centro de Mantenimiento
+          </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Interactive Client-Side Logic -->
+<script>
+    // Voice Dictation Simulation / Web Speech API support
+    const voiceBtn = document.getElementById('btn-voice-input');
+    const voiceLabel = document.getElementById('voice-label');
+    const descInput = document.getElementById('descripcion-falla');
+
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      recognition.lang = 'es-ES';
+      recognition.interimResults = false;
+
+      let isRecording = false;
+
+      voiceBtn.addEventListener('click', () => {
+        if (!isRecording) {
+          recognition.start();
+          voiceLabel.textContent = 'Escuchando...';
+          voiceBtn.classList.add('text-error');
+          isRecording = true;
+        } else {
+          recognition.stop();
+          voiceLabel.textContent = 'Dictar por Voz';
+          voiceBtn.classList.remove('text-error');
+          isRecording = false;
+        }
+      });
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        descInput.value = descInput.value ? descInput.value + ' ' + transcript : transcript;
+        voiceLabel.textContent = 'Dictar por Voz';
+        voiceBtn.classList.remove('text-error');
+        isRecording = false;
+      };
+
+      recognition.onerror = () => {
+        voiceLabel.textContent = 'Dictar por Voz';
+        voiceBtn.classList.remove('text-error');
+        isRecording = false;
+      };
+    } else {
+      voiceBtn.addEventListener('click', () => {
+        alert('El micrófono no está habilitado en este navegador. Por favor redacta tu reporte en la caja de texto.');
+      });
+    }
+
+    // Toggle Large Text Mode for Accessibility
+    const btnLargeText = document.getElementById('btn-toggle-large-text');
+    let largeTextActive = false;
+    btnLargeText.addEventListener('click', () => {
+      largeTextActive = !largeTextActive;
+      const inputs = document.querySelectorAll('#form-reparacion input, #form-reparacion textarea, #form-reparacion label, #form-reparacion select');
+      inputs.forEach(el => {
+        if (largeTextActive) {
+          el.classList.add('scale-[1.03]', 'origin-left');
+        } else {
+          el.classList.remove('scale-[1.03]', 'origin-left');
+        }
+      });
+      btnLargeText.textContent = largeTextActive ? 'Texto Normal' : 'Texto +20%';
+    });
+
+    // Human Assistance Call Simulation
+    const btnCallHuman = document.getElementById('btn-call-human');
+    btnCallHuman.addEventListener('click', () => {
+      alert('Conectando con la Mesa de Control de Ingeniería EcoSphere: Línea Prioritaria +34 900 882 110 (Atención 24/7 disponible).');
+    });
+
+    // Billing Period Switcher UI States
+    const btnAnual = document.getElementById('btn-billing-anual');
+    const btnEvento = document.getElementById('btn-billing-evento');
+
+    btnEvento.addEventListener('click', () => {
+      btnEvento.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btnEvento.classList.remove('text-on-surface-variant');
+      btnAnual.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btnAnual.classList.add('text-on-surface-variant');
+    });
+
+    btnAnual.addEventListener('click', () => {
+      btnAnual.classList.add('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btnAnual.classList.remove('text-on-surface-variant');
+      btnEvento.classList.remove('bg-surface-container-lowest', 'text-on-surface', 'shadow-sm');
+      btnEvento.classList.add('text-on-surface-variant');
+    });
+  </script>
+</div></main></div></body></html>

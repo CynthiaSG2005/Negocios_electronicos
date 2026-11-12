@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","on-error-container":"#93000a","background":"#f7f9ff","on-primary-fixed-variant":"#0e5138","tertiary":"#5a4400","on-secondary-fixed":"#001e2f","primary-fixed":"#b1f0ce","outline":"#707973","tertiary-container":"#775b06","surface":"#f7f9ff","on-background":"#181c20","on-tertiary-fixed":"#251a00","inverse-surface":"#2d3135","on-secondary":"#ffffff","on-surface":"#181c20","primary-fixed-dim":"#95d4b3","primary-container":"#2d6a4f","on-tertiary-fixed-variant":"#5a4400","on-tertiary-container":"#fcd579","surface-variant":"#e0e3e8","primary":"#0f5238","secondary-fixed":"#c9e6ff","on-secondary-container":"#37627f","on-primary-container":"#a8e7c5","outline-variant":"#bfc9c1","surface-container-high":"#e5e8ee","on-secondary-fixed-variant":"#1d4b67","tertiary-fixed-dim":"#e7c268","secondary-container":"#b2dcfe","error-container":"#ffdad6","tertiary-fixed":"#ffdf96","error":"#ba1a1a","surface-container-highest":"#e0e3e8","secondary":"#386380","inverse-primary":"#95d4b3","on-surface-variant":"#404943","surface-dim":"#d7dadf","surface-container-low":"#f1f4f9","surface-tint":"#2c694e","surface-container":"#ebeef3","on-primary-fixed":"#002114","surface-container-lowest":"#ffffff","on-tertiary":"#ffffff","secondary-fixed-dim":"#a1cced","on-primary":"#ffffff","surface-bright":"#f7f9ff","inverse-on-surface":"#eef1f6"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"gutter":"1.5rem","gutter-mobile":"1rem","margin":"2rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1rem","space-lg":"1.5rem","space-xl":"2.5rem","space-sm":"0.5rem"},fontFamily:{"headline-sm":["Plus Jakarta Sans"],"label-md":["Inter"],"body-lg":["Inter"],"title-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Inter"],"body-sm":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"400"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.005em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"20px","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","fontWeight":"400"}],"display-lg-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.015em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.03em","fontWeight":"500"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside aria-label="Navegación Principal de la Plataforma" class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm bg-surface-container-lowest"><img alt="Smart Clean-Tech Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBlq62Q69bgr4Kj3pmaKNgQQryIyyPV49U83ie_45WkWgjmEbk8gIsuExDGx6dZj_uO2L4sLzlm72CmnAW6jWdPHzPQTKg_GLc7DI_t7dVsa1PhNRjvjuM0u7eY0heIt-DO2ia7mtCQoCNAfgGBLhVB4WYzcrium9kWsDTtSbfhxnYb-yqZpuieKV3WlK8s7ZBVKGm3opKs527NMVqVmS5ldbjeXrRHJa-pYTJF7oqz"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-none tracking-tight">Ecosphere</span><span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase mt-space-xs">BI &amp; CRM Hardware</span></div></div><div class="px-space-md py-space-sm"><div class="px-space-sm py-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">Consola Operativa</div></div><nav aria-label="Menú del Sistema" class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-title-md"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="crm-ventas" href="#"><span class="material-symbols-outlined text-secondary text-xl">group_work</span><span>CRM &amp; Ventas</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="catalogo-smart-bin-ia" href="#"><span class="material-symbols-outlined text-secondary text-xl">inventory_2</span><span>Catálogo &amp; Smart Bin IA</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="servicios-de-mantenimiento" href="#"><span class="material-symbols-outlined text-secondary text-xl">build_circle</span><span>Servicios de Mantenimiento</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="gestion-de-pedidos-checkout" href="#"><span class="material-symbols-outlined text-secondary text-xl">shopping_cart_checkout</span><span>Gestión de Pedidos &amp; Checkout</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="bi-metricas-de-reciclaje" href="#"><span class="material-symbols-outlined text-secondary text-xl">analytics</span><span>BI &amp; Métricas de Reciclaje</span></a></nav></div><div class="p-space-md bg-surface-container-low m-space-md rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-md text-label-md text-on-surface">Flota Smart Bin IA</span><span class="px-space-xs py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">99.4% Online</span></div><p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Sensores telemétricos e inferencia visual de clasificación activos.</p><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary h-full w-[92%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between gap-space-md" role="banner"><div class="flex-1 max-w-xl"><div class="relative flex items-center w-full"><span aria-hidden="true" class="material-symbols-outlined absolute left-space-md text-outline pointer-events-none text-xl">search</span><input aria-label="Búsqueda global corporativa de clientes, pedidos y dispositivos Smart Bin" class="w-full h-10 pl-11 pr-space-md rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Buscar clientes, pedidos, dispositivos Smart Bin IA..." type="search"/></div></div><div class="flex items-center gap-space-sm"><div aria-label="Herramientas de Accesibilidad Universal" class="flex items-center gap-space-xs bg-surface-container-lowest p-1 rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]" role="group"><button aria-label="Activar modo de alto contraste para visibilidad en planta" class="h-8 w-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Alto Contraste WCAG AAA" type="button"><span aria-hidden="true" class="material-symbols-outlined text-lg">contrast</span></button><button aria-label="Ajustar tamaño de fuente de la interfaz" class="h-8 w-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Tamaño de Texto Adaptativo" type="button"><span aria-hidden="true" class="material-symbols-outlined text-lg">format_size</span></button><button aria-label="Asistente de lectura de pantalla y síntesis de voz" class="h-8 w-8 flex items-center justify-center rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Lector de Pantalla Asistido" type="button"><span aria-hidden="true" class="material-symbols-outlined text-lg">hearing</span></button></div><div aria-hidden="true" class="h-6 w-px bg-surface-variant mx-space-xs"></div><button aria-label="Notificaciones del sistema: 3 alertas telemétricas de sensores" class="relative h-10 w-10 flex items-center justify-center rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-colors" type="button"><span aria-hidden="true" class="material-symbols-outlined text-xl">notifications</span><span aria-hidden="true" class="absolute top-2 right-2 w-2 h-2 rounded-full bg-tertiary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden lg:flex"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Elena Domínguez</span><span class="font-label-sm text-label-sm text-secondary font-medium">Gerente de Operaciones &amp; BI</span></div><button aria-label="Menú de perfil de usuario corporativo" class="flex items-center gap-space-xs rounded-full focus:outline-none focus:ring-2 focus:ring-secondary" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAANJb_z7quBMmCX7R2OmOGBAabe4eGNBFTGzmGj-uqh2poy50UWTAa6495YEcfsa4b4M5SRxukcRmwwK9XoonRU5-ij1evO6w0vPWx1WJ2FbeHhKOr96Ln1Lhk1CbKKa_Q_ou0qHCKkN75fjccgfC1cizrgdEDGVDo6meHVYoLqJB1aRbCL_aSWh1q3H0Xc579PzibhnMMKf1gCzSfbbWVyhgtFMaACZ4OwYDNPuw"/></button></div></div></header><main class="w-full pt-16 bg-surface px-gutter py-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Bar: Operational Context & Quick Global Actions -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-base">dashboard_customize</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Consola Comercial &amp; Flota Distribuida</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">WCAG AAA Compliance</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Gestión Comercial &amp; CRM de Clientes</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-0.5">
+        Supervisión de cuentas corporativas, contratos telemétricos Smart Bin IA, direcciones de entrega verificadas y adopción de servicios de mantenimiento preventivo.
+      </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button aria-label="Exportar datos del CRM a reporte BI en formato CSV o PDF" class="inline-flex items-center gap-space-xs px-space-md h-11 rounded-lg bg-surface-container text-secondary font-label-lg text-label-lg hover:bg-surface-container-high transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary" id="btn-export-bi" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-lg">file_download</span>
+<span>Exportar Reporte BI</span>
+</button>
+<button aria-label="Abrir formulario para registrar nueva venta o pedido de Smart Bin IA" class="inline-flex items-center gap-space-xs px-space-md h-11 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-secondary" id="btn-new-sale" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-lg">add_shopping_cart</span>
+<span>Registrar Nueva Venta / Pedido</span>
+</button>
+</div>
+</section>
+<!-- Metric Badges / Accessible KPIs Strip -->
+<section aria-label="Métricas de Impacto Comercial y Operativo" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Clientes Activos -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Clientes Activos</span>
+<span class="h-9 w-9 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">corporate_fare</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none">1,248</span>
+<span class="inline-flex items-center text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm">trending_up</span> +14.2%
+        </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">420 sedes corporativas con telemática activa</span>
+</div>
+<!-- Card 2: Pedidos en Tránsito -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Pedidos en Tránsito</span>
+<span class="h-9 w-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none">86</span>
+<span class="font-label-sm text-label-sm text-secondary">100% rutas accesibles</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden mt-1">
+<div class="bg-secondary h-full w-[78%]" title="78% entregas en tiempo objetivo"></div>
+</div>
+</div>
+<!-- Card 3: Tasa de Adopción Mantenimiento Opcional -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Adopción Mantenimiento</span>
+<span class="h-9 w-9 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">health_and_safety</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-primary font-bold leading-none">42%</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container text-on-primary-container font-semibold">Meta Trimestral</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Contratos preventivos con reemplazo por sensor óptico</p>
+</div>
+<!-- Card 4: Residuos Clasificados con IA -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Residuos Clasificados IA</span>
+<span class="h-9 w-9 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">psychology</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-xs mb-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold leading-none">384.6</span>
+<span class="font-title-md text-title-md text-secondary">Ton</span>
+</div>
+<div class="flex items-center gap-space-xs text-outline">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">98.7% precisión en espectro PET/Orgánico</span>
+</div>
+</div>
+</section>
+<!-- Interactive Search, Quick Filters & Master-Detail Hub -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left / Main Grid (8 Cols on Large Screens) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Filter Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<!-- Interactive Buttons Filters -->
+<div aria-label="Filtros de Clientes" class="flex items-center gap-space-xs overflow-x-auto pb-1 md:pb-0" role="toolbar">
+<button class="filter-pill active px-space-md py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-secondary transition-all" data-filter="all" type="button">
+            Todos (1,248)
+          </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-variant hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" data-filter="with-maintenance" type="button">
+            Con Mantenimiento (524)
+          </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-variant hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" data-filter="without-maintenance" type="button">
+            Solo Hardware (592)
+          </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-variant hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" data-filter="verified-address" type="button">
+            Dirección Verificada (1,180)
+          </button>
+<button class="filter-pill px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface-variant hover:bg-surface-variant hover:text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" data-filter="pending-dispatch" type="button">
+            Pendiente Despacho (46)
+          </button>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline font-medium" id="results-count">Mostrando 4 clientes clave</span>
+</div>
+</div>
+<!-- Clients List / Cards with Detailed Operational Attributes -->
+<div aria-label="Listado de Clientes y Contratos Smart Bin IA" class="flex flex-col gap-space-sm" id="clients-container" role="feed">
+<!-- Client Row 1: Hospital Angeles Lomas -->
+<article aria-labelledby="client-name-1" class="client-row bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md focus:shadow-md focus:outline-none focus:bg-surface-container-low transition-all cursor-pointer relative" data-client-id="CL-9021" data-has-maintenance="true" data-pending="false" data-verified="true" role="article" tabindex="0">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">local_hospital</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate" id="client-name-1">Hospital Ángeles Metropolitano</h2>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">verified</span>
+                    Email Validado
+                  </span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">verified_user</span>
+                    Mantenimiento Activo (SLA 4h)
+                  </span>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">mail</span>
+                    compras.medicas@angeles-metro.mx
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">call</span>
+                    +52 (55) 5424-7200 ext. 410
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">location_on</span>
+                    Vialidad de la Barranca 24, Huixquilucan
+                  </span>
+</div>
+</div>
+</div>
+<!-- Hardware Badge & Action -->
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0 pt-space-xs md:pt-0">
+<div class="text-left md:text-right">
+<div class="flex items-center md:justify-end gap-1 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+<span>14 Smart Bins IA</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mod. UltraClean 120L (PET + Org)</span>
+</div>
+<button aria-label="Ver ficha detallada de Hospital Ángeles" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bottom Telemetry & Delivery Route Status -->
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">accessible</span>
+<span>Entrega Accesible: Rampa Médica Aislada • Elevador Montacargas Carga #2</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-outline">Última sync telemétrica: hace 4 min</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">ID: CL-9021</span>
+</div>
+</div>
+</article>
+<!-- Client Row 2: Campus Universitario Valle -->
+<article aria-labelledby="client-name-2" class="client-row bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md focus:shadow-md focus:outline-none focus:bg-surface-container-low transition-all cursor-pointer relative" data-client-id="CL-8442" data-has-maintenance="false" data-pending="true" data-verified="true" role="article" tabindex="0">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary flex-shrink-0">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">school</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate" id="client-name-2">Universidad Tecnológica del Valle</h2>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">verified</span>
+                    Email Validado
+                  </span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">do_not_disturb_on</span>
+                    Sin Mantenimiento (Solo Hardware)
+                  </span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">schedule</span>
+                    Despacho Pendiente
+                  </span>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">mail</span>
+                    sustentabilidad@utvalle.edu.mx
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">call</span>
+                    +52 (55) 7890-1122
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">location_on</span>
+                    Av. Instituto Politécnico 3400, Gustavo A. Madero
+                  </span>
+</div>
+</div>
+</div>
+<!-- Hardware Badge & Action -->
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0 pt-space-xs md:pt-0">
+<div class="text-left md:text-right">
+<div class="flex items-center md:justify-end gap-1 text-secondary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+<span>28 Smart Bins IA</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mod. Campus 240L Tri-Fila</span>
+</div>
+<button aria-label="Ver ficha detallada de Universidad Tecnológica" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Bottom Telemetry & Delivery Route Status -->
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-secondary">accessible_forward</span>
+<span>Entrega Accesible: Acceso vehicular nivel de piso • Requiere confirmación SMS previa</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-tertiary font-medium">Garantía Base 12 meses vigente</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">ID: CL-8442</span>
+</div>
+</div>
+</article>
+<!-- Client Row 3: Co-Working GreenHub Polanco -->
+<article aria-labelledby="client-name-3" class="client-row bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md focus:shadow-md focus:outline-none focus:bg-surface-container-low transition-all cursor-pointer relative" data-client-id="CL-7210" data-has-maintenance="true" data-pending="false" data-verified="true" role="article" tabindex="0">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary flex-shrink-0">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">apartment</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate" id="client-name-3">GreenHub Cowork Polanco</h2>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">verified</span>
+                    Email Validado
+                  </span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">verified_user</span>
+                    Mantenimiento Activo (SLA 8h)
+                  </span>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">mail</span>
+                    facilities@greenhub-mex.io
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">call</span>
+                    +52 (55) 9138-0050
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">location_on</span>
+                    Campos Elíseos 204, Polanco V Sección
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0 pt-space-xs md:pt-0">
+<div class="text-left md:text-right">
+<div class="flex items-center md:justify-end gap-1 text-primary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+<span>6 Smart Bins IA</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mod. Executive Compact 60L</span>
+</div>
+<button aria-label="Ver ficha detallada de GreenHub Cowork" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">accessible</span>
+<span>Entrega Accesible: Rampa certificada WCAG, elevador de carga con señalética Braille</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-primary font-medium">Auto-calibración óptica completada</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">ID: CL-7210</span>
+</div>
+</div>
+</article>
+<!-- Client Row 4: Logística Parque Industrial Norte -->
+<article aria-labelledby="client-name-4" class="client-row bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md focus:shadow-md focus:outline-none focus:bg-surface-container-low transition-all cursor-pointer relative" data-client-id="CL-6119" data-has-maintenance="false" data-pending="false" data-verified="true" role="article" tabindex="0">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-outline flex-shrink-0">
+<span aria-hidden="true" class="material-symbols-outlined text-2xl">warehouse</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-title-md text-title-md text-on-surface font-semibold truncate" id="client-name-4">Operadora Logística Tlalnepantla</h2>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">verified</span>
+                    Email Validado
+                  </span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+<span aria-hidden="true" class="material-symbols-outlined text-xs">shield</span>
+                    En Garantía Base (Solo Hardware)
+                  </span>
+</div>
+<div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">mail</span>
+                    compras@oplogistica-mex.com
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">call</span>
+                    +52 (55) 5390-8800
+                  </span>
+<span class="flex items-center gap-1">
+<span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">location_on</span>
+                    Vía Dr. Gustavo Baz 2160, Tlalnepantla
+                  </span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0 pt-space-xs md:pt-0">
+<div class="text-left md:text-right">
+<div class="flex items-center md:justify-end gap-1 text-secondary font-label-lg text-label-lg">
+<span class="material-symbols-outlined text-lg">delete_sweep</span>
+<span>10 Smart Bins IA</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mod. HeavyDuty Industrial 360L</span>
+</div>
+<button aria-label="Ver ficha detallada de Operadora Logística" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-xl">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-sm text-primary">accessible</span>
+<span>Entrega Accesible: Andén con rampa electro-hidráulica • Caseta de seguridad con lector audible</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="text-outline">Sin servicio preventivo</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">ID: CL-6119</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Accessible Pagination & Bulk Status -->
+<nav aria-label="Navegación de páginas de clientes" class="flex items-center justify-between bg-surface-container-lowest p-space-md rounded-xl shadow-sm text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Página <strong class="text-on-surface font-semibold">1</strong> de 42</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-outline opacity-60 cursor-not-allowed font-label-sm text-label-sm" disabled="" type="button">Anterior</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm" type="button">1</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">2</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">3</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-sm text-label-sm" type="button">Siguiente</button>
+</div>
+</nav>
+</div>
+<!-- Right Column: Buyer Detail Drawer / CRM Dynamic Panel (4 Cols on Large Screens) -->
+<aside aria-label="Ficha de Detalle de Cliente y Oportunidades CRM" class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between pb-space-sm bg-surface-container-lowest">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Ficha Comercial Activa</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="drawer-client-name">Hospital Ángeles Metropolitano</h3>
+<span class="font-label-sm text-label-sm text-outline" id="drawer-client-id">ID Cliente: CL-9021 • Cuenta Platinum</span>
+</div>
+<span class="inline-flex items-center p-1.5 rounded-lg bg-primary-container text-on-primary-container" title="Conexión telemétrica en vivo">
+<span class="material-symbols-outlined text-lg">sensors</span>
+</span>
+</div>
+<!-- Verified Contact Details Module -->
+<div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Contacto Principal</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-semibold">
+<span class="material-symbols-outlined text-xs">verified</span> Verificado
+            </span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-medium">Dra. Claudia Fuentes V.</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Directora de Operaciones &amp; ESG</span>
+<div class="mt-1 flex flex-col gap-1 font-body-sm text-body-sm text-on-surface">
+<a class="inline-flex items-center gap-1.5 text-secondary hover:underline focus:outline-none focus:ring-1 focus:ring-secondary rounded" href="mailto:compras.medicas@angeles-metro.mx">
+<span class="material-symbols-outlined text-sm">mail</span>
+<span>compras.medicas@angeles-metro.mx</span>
+</a>
+<a class="inline-flex items-center gap-1.5 text-on-surface hover:text-secondary focus:outline-none focus:ring-1 focus:ring-secondary rounded" href="tel:+525554247200">
+<span class="material-symbols-outlined text-sm">phone</span>
+<span>+52 (55) 5424-7200 ext. 410</span>
+</a>
+</div>
+</div>
+<!-- Shipping & Universal Accessibility Transport Profile -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Dirección de Despacho &amp; Logística Accesible</span>
+<span class="material-symbols-outlined text-base text-primary">assist_walker</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container">
+<p class="font-body-sm text-body-sm text-on-surface font-semibold">
+              Vialidad de la Barranca 24, Edificio Central, Huixquilucan, Edo. Méx., C.P. 52763
+            </p>
+<!-- Accessibility Criteria Indicator -->
+<div class="mt-2 pt-2 bg-surface-container flex flex-col gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+<span>Rampa de descarga sin desnivel (Aprobada transporte pesado)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-primary">check_circle</span>
+<span>Puertas con apertura mínima de 120 cm (Pasaje directo a cuartos limpios)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">info</span>
+<span>Horario preferente: 06:00 - 10:00 (Evitar hora pico de urgencias)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Hardware & Sensor Telemetry Status -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-outline">Parque de Dispositivos Smart Bin IA</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">14 Unidades</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Capacidad Actual</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">73.4% Prom.</span>
+<span class="font-label-sm text-label-sm text-primary">Recolección mañana</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Sensor Óptico IA</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">99.8% Online</span>
+<span class="font-label-sm text-label-sm text-secondary">Firmware v3.4.1</span>
+</div>
+</div>
+</div>
+<!-- Ethical Cross-Selling / Upsell Advisory -->
+<div class="mt-space-md p-space-md rounded-xl bg-tertiary-fixed text-on-tertiary-fixed shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="material-symbols-outlined text-xl text-tertiary">lightbulb</span>
+<span class="font-label-lg text-label-lg font-bold text-on-tertiary-fixed">Oportunidad Ética de Servicio</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed mb-space-sm">
+            Este cliente genera un alto volumen de residuos biológicos inertes. Recomendar recambio trimestral del filtro HEPA de olores y extensión del SLA de mantenimiento preventivo a 2 horas.
+          </p>
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-tertiary-fixed font-semibold">+ 4 Sensores Odor-Guard</span>
+<button class="px-space-md py-1.5 rounded-lg bg-on-tertiary-fixed text-surface font-label-sm text-label-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-secondary transition-all" type="button">
+              Enviar Cotización Sugerida
+            </button>
+</div>
+</div>
+<!-- CRM Interaction History -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-outline">Bitácora de Interacciones CRM</span>
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Timeline Item 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-base text-primary mt-0.5">call_received</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Llamada de Onboarding &amp; Calibración</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Realizada por Daniel M. con Dra. Fuentes. Se ajustó el umbral de detección de polietileno.</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">Ayer a las 16:30 hrs</span>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-base text-secondary mt-0.5">mark_email_read</span>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Confirmación de Despacho Inicial</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Guía de rastreo #99283 enviada y confirmada con acuse de recibo de rampa médica.</span>
+<span class="font-label-sm text-label-sm text-outline mt-0.5">14 Octubre, 11:15 hrs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Log Action -->
+<div class="mt-space-md pt-space-sm bg-surface-container-lowest flex items-center justify-between gap-space-xs">
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container text-secondary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors text-center focus:outline-none focus:ring-1 focus:ring-secondary" type="button">
+            Registrar Llamada
+          </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container text-secondary font-label-sm text-label-sm hover:bg-surface-container-high transition-colors text-center focus:outline-none focus:ring-1 focus:ring-secondary" type="button">
+            Crear Ticket SLA
+          </button>
+</div>
+</div>
+</aside>
+</section>
+</div>
+<script>
+  // Filter pill interaction & dynamic updates
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const clientRows = document.querySelectorAll('.client-row');
+  const resultsCount = document.getElementById('results-count');
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      // Toggle visual active state
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary', 'active');
+        p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      pill.classList.add('bg-primary', 'text-on-primary', 'active');
+
+      const filterType = pill.getAttribute('data-filter');
+      let visible = 0;
+
+      clientRows.forEach(row => {
+        let match = false;
+        if (filterType === 'all') {
+          match = true;
+        } else if (filterType === 'with-maintenance') {
+          match = row.getAttribute('data-has-maintenance') === 'true';
+        } else if (filterType === 'without-maintenance') {
+          match = row.getAttribute('data-has-maintenance') === 'false';
+        } else if (filterType === 'verified-address') {
+          match = row.getAttribute('data-verified') === 'true';
+        } else if (filterType === 'pending-dispatch') {
+          match = row.getAttribute('data-pending') === 'true';
+        }
+
+        if (match) {
+          row.style.display = 'block';
+          visible++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (resultsCount) {
+        resultsCount.textContent = `Mostrando ${visible} clientes filtrados`;
+      }
+    });
+  });
+
+  // Client row selection updating the right drawer
+  const clientData = {
+    'CL-9021': {
+      name: 'Hospital Ángeles Metropolitano',
+      id: 'CL-9021 • Cuenta Platinum',
+      contact: 'Dra. Claudia Fuentes V.',
+      role: 'Directora de Operaciones & ESG',
+      email: 'compras.medicas@angeles-metro.mx',
+      phone: '+52 (55) 5424-7200 ext. 410',
+      address: 'Vialidad de la Barranca 24, Edificio Central, Huixquilucan, Edo. Méx., C.P. 52763',
+      bins: '14 Unidades',
+      capacity: '73.4% Prom.'
+    },
+    'CL-8442': {
+      name: 'Universidad Tecnológica del Valle',
+      id: 'CL-8442 • Sector Educativo',
+      contact: 'Ing. Mateo Sandoval',
+      role: 'Coordinador de Infraestructura Verde',
+      email: 'sustentabilidad@utvalle.edu.mx',
+      phone: '+52 (55) 7890-1122',
+      address: 'Av. Instituto Politécnico 3400, Gustavo A. Madero, CDMX, C.P. 07360',
+      bins: '28 Unidades',
+      capacity: '41.2% Prom.'
+    },
+    'CL-7210': {
+      name: 'GreenHub Cowork Polanco',
+      id: 'CL-7210 • Cuenta Corporativa',
+      contact: 'Lic. Sandra Morales',
+      role: 'Jefa de Workplace & Facilities',
+      email: 'facilities@greenhub-mex.io',
+      phone: '+52 (55) 9138-0050',
+      address: 'Campos Elíseos 204, Polanco V Sección, Miguel Hidalgo, CDMX, C.P. 11560',
+      bins: '6 Unidades',
+      capacity: '88.1% Prom.'
+    },
+    'CL-6119': {
+      name: 'Operadora Logística Tlalnepantla',
+      id: 'CL-6119 • Industrial & Logística',
+      contact: 'Armando Carrillo R.',
+      role: 'Gerente General de Planta',
+      email: 'compras@oplogistica-mex.com',
+      phone: '+52 (55) 5390-8800',
+      address: 'Vía Dr. Gustavo Baz 2160, Tlalnepantla de Baz, Edo. Méx., C.P. 54000',
+      bins: '10 Unidades',
+      capacity: '62.0% Prom.'
+    }
+  };
+
+  clientRows.forEach(row => {
+    row.addEventListener('click', () => {
+      const clientId = row.getAttribute('data-client-id');
+      const data = clientData[clientId];
+      if (!data) return;
+
+      const nameEl = document.getElementById('drawer-client-name');
+      const idEl = document.getElementById('drawer-client-id');
+      if (nameEl) nameEl.textContent = data.name;
+      if (idEl) idEl.textContent = `ID Cliente: ${data.id}`;
+
+      // Visual outline highlight
+      clientRows.forEach(r => r.classList.remove('bg-surface-container-high'));
+      row.classList.add('bg-surface-container-high');
+    });
+
+    // Keyboard navigation accessibility
+    row.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        row.click();
+      }
+    });
+  });
+
+  // Export BI feedback
+  const exportBtn = document.getElementById('btn-export-bi');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const originalText = exportBtn.innerHTML;
+      exportBtn.innerHTML = '<span class="material-symbols-outlined text-lg animate-spin">refresh</span><span>Generando BI...</span>';
+      setTimeout(() => {
+        exportBtn.innerHTML = '<span class="material-symbols-outlined text-lg text-primary">done</span><span>Reporte Descargado</span>';
+        setTimeout(() => {
+          exportBtn.innerHTML = originalText;
+        }, 2000);
+      }, 900);
+    });
+  }
+</script></main></div></body></html>
