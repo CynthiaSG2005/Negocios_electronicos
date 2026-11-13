@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#F4F6F9]" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BI &amp; Métricas de Reciclaje Automatizado - Ecosphere Smart Bin IA</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter / Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            ecosphere: {
+              green: '#2D6A4F',
+              greenDark: '#1E4D38',
+              greenLight: '#E8F5EE',
+              petBlue: '#1B4965',
+              petLight: '#E6EFF5',
+              yellowRecycle: '#E9C46A',
+              yellowLight: '#FEF8EA',
+              dark: '#212529',
+              muted: '#6C757D',
+              surface: '#FFFFFF',
+              bgLight: '#F4F6F9',
+              border: '#E9ECEF'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-scrollbars">
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c5cbd5;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a0aab7;
+    }
+  </style>
+</head>
+<body class="h-full bg-[#F4F6F9] font-sans text-ecosphere-dark flex antialiased selection:bg-emerald-100 selection:text-emerald-900">
+<!-- BEGIN: LeftSidebar -->
+<aside class="w-64 flex-shrink-0 bg-white border-r border-[#E2E8F0] flex flex-col justify-between z-20 min-h-screen" data-purpose="main-sidebar">
+<div class="flex flex-col flex-1">
+<!-- Brand / Logo Area -->
+<div class="px-5 py-4 border-b border-[#F1F5F9] flex items-center justify-between" data-purpose="sidebar-brand">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-[#1B4965] to-[#2D6A4F] flex items-center justify-center text-white shadow-sm font-bold text-lg">
+<svg class="w-5 h-5 text-emerald-300" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24">
+<path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+<path d="M12 2a10 10 0 0 1 10 10"></path>
+<path d="M12 12 2.1 12a10 10 0 0 0 9.9 10V12z"></path>
+</svg>
+</div>
+<div>
+<span class="block text-base font-extrabold tracking-tight text-slate-800 leading-tight">Ecosphere</span>
+<span class="block text-[10px] font-bold tracking-wider text-[#2D6A4F] uppercase leading-tight">BI &amp; CRM HARDWARE</span>
+</div>
+</div>
+</div>
+<!-- Navigation Section -->
+<div class="px-3 py-4">
+<p class="px-3 text-[11px] font-bold tracking-wider text-slate-400 uppercase mb-2">Consola Operativa</p>
+<nav class="space-y-1" data-purpose="sidebar-nav-items">
+<!-- Menu Item 1: CRM & Ventas -->
+<a class="group flex items-center justify-between px-3 py-2 text-xs font-semibold text-slate-600 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="10" stroke-width="1.8"></circle>
+<circle cx="12" cy="10" r="3" stroke-width="1.8"></circle>
+<path d="M7 18.5c1.2-2.1 3.2-3.5 5-3.5s3.8 1.4 5 3.5" stroke-width="1.8"></path>
+</svg>
+<span>CRM &amp; Ventas</span>
+</div>
+<span class="text-[10px] bg-slate-100 text-slate-500 font-semibold px-1.5 py-0.5 rounded">1</span>
+</a>
+<!-- Menu Item 2: Catálogo & Smart Bin IA -->
+<a class="group flex items-center justify-between px-3 py-2 text-xs font-semibold text-slate-600 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span>Catálogo &amp; Smart Bin IA</span>
+</div>
+<span class="text-[10px] bg-slate-100 text-slate-500 font-semibold px-1.5 py-0.5 rounded">2</span>
+</a>
+<!-- Menu Item 3: Servicios de Mantenimiento -->
+<a class="group flex items-center justify-between px-3 py-2 text-xs font-semibold text-slate-600 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="truncate">Servicios de Manteni...</span>
+</div>
+<span class="text-[10px] bg-slate-100 text-slate-500 font-semibold px-1.5 py-0.5 rounded">3</span>
+</a>
+<!-- Menu Item 4: Gestión de Pedidos & Checkout -->
+<a class="group flex items-center justify-between px-3 py-2 text-xs font-semibold text-slate-600 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-colors" href="#">
+<div class="flex items-center space-x-3">
+<svg class="w-4 h-4 text-slate-400 group-hover:text-slate-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+<span class="truncate">Gestión de Pedidos &amp; ...</span>
+</div>
+<span class="text-[10px] bg-slate-100 text-slate-500 font-semibold px-1.5 py-0.5 rounded">4</span>
+</a>
+<!-- Menu Item 5: BI & Métricas de Reciclaje (ACTIVE ITEM) -->
+<a class="flex items-center justify-between px-3 py-2.5 text-xs font-bold text-white bg-[#2D6A4F] rounded-lg shadow-sm" href="#">
+<div class="flex items-center space-x-3">
+<svg class="w-4 h-4 text-emerald-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="truncate">BI &amp; Métricas de Reci...</span>
+</div>
+<span class="text-[10px] bg-[#1E4D38] text-emerald-100 font-bold px-1.5 py-0.5 rounded">5</span>
+</a>
+</nav>
+</div>
+</div>
+<!-- Bottom Status & System Info -->
+<div class="p-3 border-t border-[#F1F5F9] space-y-2" data-purpose="sidebar-footer">
+<div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[11px] font-bold text-slate-800">Flota Smart Bin IA</span>
+<span class="text-[10px] font-semibold bg-[#2D6A4F] text-white px-1.5 py-0.5 rounded">99.4% Online</span>
+</div>
+<p class="text-[10px] text-slate-500 leading-tight mb-2">Sensores telemétricos e inferencia visual de clasificación activos.</p>
+<!-- Mini Progress bar -->
+<div class="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
+<div class="bg-[#2D6A4F] h-1.5 rounded-full" style="width: 99.4%"></div>
+</div>
+</div>
+<!-- Accessibility Shortcut Button -->
+<button class="w-full flex items-center justify-center space-x-1.5 py-2 px-3 text-slate-600 bg-white hover:bg-slate-100 border border-slate-200 rounded-lg text-xs font-semibold transition-colors" type="button">
+<svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+<path d="M12 8v4m0 4h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[11px]">Atajos Accesibles (Pulsa ?)</span>
+</button>
+</div>
+</aside>
+<!-- END: LeftSidebar -->
+<!-- BEGIN: MainContentWrapper -->
+<div class="flex-1 flex flex-col min-w-0 overflow-y-auto">
+<!-- BEGIN: TopBar -->
+<header class="bg-white border-b border-[#E2E8F0] sticky top-0 z-10 px-6 py-2.5 flex items-center justify-between" data-purpose="top-navigation">
+<!-- Search Input Container -->
+<div class="flex-1 max-w-lg">
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+<svg class="h-4 w-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<input class="block w-full pl-9 pr-3 py-1.5 text-xs bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-emerald-600 focus:border-emerald-600 text-slate-800 transition" placeholder="Buscar clientes, pedidos, dispositivos Smart Bin IA..." type="text"/>
+</div>
+</div>
+<!-- Right Utility Bar -->
+<div class="flex items-center space-x-3.5 pl-4">
+<!-- Accessibility Controls -->
+<div class="flex items-center space-x-1 border border-slate-200 rounded-lg p-0.5 bg-slate-50 text-slate-600">
+<button class="p-1.5 hover:bg-white hover:text-slate-900 rounded transition-all" title="Contraste">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8v16z"></path>
+</svg>
+</button>
+<button class="p-1.5 hover:bg-white hover:text-slate-900 rounded font-bold text-xs leading-none" title="Tamaño tipografía">
+            Tt
+          </button>
+<button class="p-1.5 hover:bg-white hover:text-slate-900 rounded" title="Asistente de audio">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Notification Bell -->
+<button class="relative p-1.5 text-slate-500 hover:text-slate-700 transition" title="Notificaciones">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white"></span>
+</button>
+<div class="h-5 w-px bg-slate-200"></div>
+<!-- User Profile Info -->
+<div class="flex items-center space-x-2.5 cursor-pointer">
+<div class="text-right leading-none">
+<p class="text-xs font-bold text-slate-800">Elena Domínguez</p>
+<p class="text-[10px] text-slate-500 mt-0.5">Gerente de Operaciones &amp; BI</p>
+</div>
+<img alt="Elena Domínguez" class="w-8 h-8 rounded-full object-cover border border-slate-200 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBme1CvbtYNdRPHxJ7Yg6HtZnHpPiiYdlKOVUQ83WjWyzalOO3Pe03ejcci3oHEC73Ggrg1UBRfN7zVQaXtYiglWLEAr3-TNO97ulOxmGiDAGoBlUl1QNqLtLNrLYSl8SMx6SqnXJ3Ql_zffti_D2MjsZbwU50Y8e_hiC3QEvG72cX0S9BHSeO9j9-3KNTonsWDhCD-0l7Q64JfnejrUGqW71ji-6LduCyZLSuZdCc"/>
+</div>
+</div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: DashboardBody -->
+<main class="p-6 space-y-5" data-purpose="metrics-dashboard">
+<!-- Header / Title Section -->
+<section class="flex flex-col md:flex-row md:items-center md:justify-between gap-4" data-purpose="header-section">
+<div>
+<div class="flex items-center space-x-2 text-[11px] font-bold uppercase tracking-wider text-[#1B4965] mb-1">
+<svg class="w-3.5 h-3.5 text-[#1B4965]" fill="currentColor" viewbox="0 0 20 20">
+<path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"></path>
+</svg>
+<span>Inteligencia Ambiental &amp; Telemetría Circular</span>
+<span class="text-slate-300">•</span>
+<span class="text-emerald-700">GHG Protocol Scope 3</span>
+</div>
+<h1 class="text-2xl font-black text-slate-900 tracking-tight">BI &amp; Métricas de Reciclaje Automatizado</h1>
+<p class="text-xs text-slate-500 max-w-3xl mt-0.5 leading-relaxed">
+            Consolidación en tiempo real de material clasificado mediante inferencia edge de Smart Bin IA, ahorro de emisiones de CO2 y pureza de fardos en origen.
+          </p>
+</div>
+<!-- Filter Controls & Action Button -->
+<div class="flex items-center space-x-3 self-start md:self-auto flex-shrink-0">
+<!-- Time Range Selector -->
+<div class="bg-white border border-slate-200 rounded-lg p-0.5 flex items-center shadow-sm text-xs font-semibold text-slate-600">
+<button class="bg-slate-100 text-slate-900 px-3 py-1.5 rounded-md shadow-xs font-bold">30 Días</button>
+<button class="px-3 py-1.5 hover:text-slate-900 transition-colors">Trimestre</button>
+<button class="px-3 py-1.5 hover:text-slate-900 transition-colors">Año Completo</button>
+</div>
+<!-- Primary ESG Action -->
+<button class="flex items-center space-x-2 bg-[#2D6A4F] hover:bg-[#23533e] text-white px-3.5 py-2 rounded-lg text-xs font-bold shadow-sm transition-all">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span>Descargar Certificado ESG</span>
+</button>
+</div>
+</section>
+<!-- BEGIN: KPICardsGrid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" data-purpose="kpi-metrics-grid">
+<!-- KPI 1: Masa Total Clasificada -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">Masa Total Clasificada</span>
+<div class="w-7 h-7 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="mt-2 flex items-baseline space-x-1">
+<span class="text-2xl font-black text-slate-900">384.6</span>
+<span class="text-xs font-semibold text-slate-500">Ton</span>
+</div>
+</div>
+<div class="mt-3 flex items-center space-x-1.5 text-[11px] font-bold text-[#2D6A4F]">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span>+18.4% vs mes anterior</span>
+</div>
+</article>
+<!-- KPI 2: CO2 Evitado a la Atmósfera -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">CO2 Evitado a la Atmósfera</span>
+<div class="w-7 h-7 rounded-lg bg-[#2D6A4F] text-white flex items-center justify-center text-[10px] font-extrabold tracking-tighter">
+                CO₂
+              </div>
+</div>
+<div class="mt-2 flex items-baseline space-x-1">
+<span class="text-2xl font-black text-[#2D6A4F]">219.4</span>
+<span class="text-xs font-semibold text-[#2D6A4F]">Ton eq</span>
+</div>
+</div>
+<div class="mt-3 text-[11px] text-slate-500 font-medium leading-snug">
+            Equivale a 84,200 km de transporte fósil evitado
+          </div>
+</article>
+<!-- KPI 3: Pureza en Origen -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">Pureza en Origen</span>
+<div class="w-7 h-7 rounded-lg bg-sky-50 text-[#1B4965] flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="mt-2 flex items-center space-x-2">
+<span class="text-2xl font-black text-slate-900">98.7%</span>
+<span class="text-[10px] font-bold bg-[#E6EFF5] text-[#1B4965] px-2 py-0.5 rounded-full">Grado Alimentario</span>
+</div>
+</div>
+<div class="mt-3 text-[11px] text-slate-500 font-medium leading-snug">
+            Solo 1.3% de contaminación cruzada
+          </div>
+</article>
+<!-- KPI 4: Valor Económico Recuperado -->
+<article class="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-bold tracking-wider text-slate-500 uppercase">Valor Económico Recuperado</span>
+<div class="w-7 h-7 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<div class="mt-2">
+<span class="text-2xl font-black text-slate-900">€ 64.8K</span>
+</div>
+</div>
+<div class="mt-3 text-[11px] text-slate-500 font-medium leading-snug">
+            Ingresos generados por venta de subproductos a plantas
+          </div>
+</article>
+</section>
+<!-- END: KPICardsGrid -->
+<!-- BEGIN: DetailedMetricsSection -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-5" data-purpose="charts-breakdown-section">
+<!-- Left Big Card: Desglose por Fracción de Residuo (col-span-7) -->
+<div class="lg:col-span-7 bg-white rounded-xl border border-slate-200/90 shadow-xs flex flex-col justify-between p-5">
+<div>
+<div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+<h2 class="text-sm font-bold text-slate-800">Desglose por Fracción de Residuo</h2>
+<span class="text-[11px] font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded">Auditoría con Cámara NIR</span>
+</div>
+<!-- Material Categories Progress Bars -->
+<div class="space-y-4 pt-1">
+<!-- Fraction 1: PET & Termoplásticos -->
+<div>
+<div class="flex items-center justify-between text-xs mb-1.5">
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#1B4965]"></span>
+<span class="font-bold text-slate-700">Plásticos PET &amp; Termoplásticos</span>
+</div>
+<span class="font-bold text-slate-800">142.2 Ton <span class="text-slate-400 font-normal">(37%)</span></span>
+</div>
+<div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+<div class="bg-[#1B4965] h-2 rounded-full" style="width: 37%"></div>
+</div>
+</div>
+<!-- Fraction 2: Materia Orgánica & Compost -->
+<div>
+<div class="flex items-center justify-between text-xs mb-1.5">
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#2D6A4F]"></span>
+<span class="font-bold text-slate-700">Materia Orgánica &amp; Compost</span>
+</div>
+<span class="font-bold text-slate-800">118.0 Ton <span class="text-slate-400 font-normal">(31%)</span></span>
+</div>
+<div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+<div class="bg-[#2D6A4F] h-2 rounded-full" style="width: 31%"></div>
+</div>
+</div>
+<!-- Fraction 3: Papel, Cartón & Celulosa -->
+<div>
+<div class="flex items-center justify-between text-xs mb-1.5">
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#7D5A24]"></span>
+<span class="font-bold text-slate-700">Papel, Cartón &amp; Celulosa</span>
+</div>
+<span class="font-bold text-slate-800">75.8 Ton <span class="text-slate-400 font-normal">(20%)</span></span>
+</div>
+<div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+<div class="bg-[#7D5A24] h-2 rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<!-- Fraction 4: Aluminio & Metales Ligeros -->
+<div>
+<div class="flex items-center justify-between text-xs mb-1.5">
+<div class="flex items-center space-x-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#64748B]"></span>
+<span class="font-bold text-slate-700">Aluminio &amp; Metales Ligeros</span>
+</div>
+<span class="font-bold text-slate-800">48.6 Ton <span class="text-slate-400 font-normal">(12%)</span></span>
+</div>
+<div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+<div class="bg-[#64748B] h-2 rounded-full" style="width: 12%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Bottom Verification Footer -->
+<div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span>Algoritmo de clasificación auditado por Bureau Veritas</span>
+<span class="font-bold text-[#1B4965]">Precisión promedio: 99.2%</span>
+</div>
+</div>
+<!-- Right Big Card: Impacto en la Biosfera (col-span-5) -->
+<div class="lg:col-span-5 bg-white rounded-xl border border-slate-200/90 shadow-xs flex flex-col justify-between p-5">
+<div>
+<div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+<h2 class="text-sm font-bold text-slate-800">Impacto en la Biosfera</h2>
+<svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Eco Impact List -->
+<div class="space-y-3">
+<!-- Metric 1: Árboles Preservados -->
+<div class="flex items-center space-x-3.5 p-3 rounded-lg bg-slate-50/70 border border-slate-100">
+<div class="w-10 h-10 rounded-lg bg-[#2D6A4F] text-white flex items-center justify-center flex-shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 2l4 7h-3l4 7h-4v4h-2v-4H7l4-7H8l4-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-black text-slate-900 leading-tight">3,420 Árboles</h3>
+<p class="text-[11px] text-slate-500 font-medium">Preservados por reciclaje de celulosa y cartón</p>
+</div>
+</div>
+<!-- Metric 2: Litros de Agua -->
+<div class="flex items-center space-x-3.5 p-3 rounded-lg bg-slate-50/70 border border-slate-100">
+<div class="w-10 h-10 rounded-lg bg-sky-100 text-[#1B4965] flex items-center justify-center flex-shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-black text-slate-900 leading-tight">480,000 Litros</h3>
+<p class="text-[11px] text-slate-500 font-medium">De agua potable ahorrada en procesos industriales</p>
+</div>
+</div>
+<!-- Metric 3: Electricidad Ahorrada -->
+<div class="flex items-center space-x-3.5 p-3 rounded-lg bg-slate-50/70 border border-slate-100">
+<div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center flex-shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<h3 class="text-sm font-black text-slate-900 leading-tight">89,200 kWh</h3>
+<p class="text-[11px] text-slate-500 font-medium">Energía eléctrica limpia ahorrada en refinería secundaria</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Card Bottom Circularity Index Footer -->
+<div class="mt-6 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+<span class="font-bold text-slate-800">Índice Circularidad: 94.6/100</span>
+<span class="text-slate-400">Actualizado hace 12 min</span>
+</div>
+</div>
+</section>
+<!-- END: DetailedMetricsSection -->
+</main>
+<!-- END: DashboardBody -->
+</div>
+<!-- END: MainContentWrapper -->
+</body></html>
