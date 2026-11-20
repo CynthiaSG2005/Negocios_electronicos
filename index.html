@@ -222,7 +222,7 @@
 </div>
 <span class="font-label-sm text-label-sm text-primary">Entrega Inmediata</span>
 </div>
-<button class="w-full h-11 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" onclick="selectModel('office', 'Smart Bin IA Office (2 Compartimentos)', 1280)" type="button">
+<button id="btn-model-office" class="w-full h-11 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" onclick="selectModel('office', 'Smart Bin IA Office (2 Compartimentos)', 1280)" type="button">
 <span>Seleccionar Modelo</span>
 <span class="material-symbols-outlined text-base">check</span>
 </button>
@@ -273,9 +273,9 @@
 </div>
 <span class="font-label-sm text-label-sm text-primary font-semibold">Garantía 3 Años</span>
 </div>
-<button class="w-full h-11 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="selectModel('enterprise', 'Smart Bin IA Enterprise (4 Compartimentos)', 2890)" type="button">
+<button id="btn-model-enterprise" class="w-full h-11 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs shadow-sm" onclick="selectModel('enterprise', 'Smart Bin IA Enterprise (4 Compartimentos)', 2890)" type="button">
 <span>Seleccionar Modelo Recomendado</span>
-<span class="material-symbols-outlined text-base">arrow_forward</span>
+<span class="material-symbols-outlined text-base">check_circle</span>
 </button>
 </div>
 </div>
@@ -321,7 +321,7 @@
 </div>
 <span class="font-label-sm text-label-sm text-secondary">Renting Disponible</span>
 </div>
-<button class="w-full h-11 rounded-lg bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" onclick="selectModel('industrial', 'Smart Bin IA Industrial (Heavy Duty + Prensa)', 4750)" type="button">
+<button id="btn-model-industrial" class="w-full h-11 rounded-lg bg-surface-container-high hover:bg-secondary hover:text-on-secondary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs" onclick="selectModel('industrial', 'Smart Bin IA Industrial (Heavy Duty + Prensa)', 4750)" type="button">
 <span>Seleccionar Modelo</span>
 <span class="material-symbols-outlined text-base">check</span>
 </button>
@@ -614,6 +614,23 @@
     document.getElementById('summary-model-name').textContent = name;
     document.getElementById('summary-model-label').textContent = name;
     document.getElementById('summary-model-base-price').textContent = '€ ' + price.toLocaleString('es-ES', { minimumFractionDigits: 2 });
+
+    // Actualizar apariencia de los 3 botones
+    const models = ['office', 'enterprise', 'industrial'];
+    models.forEach(m => {
+      const btn = document.getElementById('btn-model-' + m);
+      if (!btn) return;
+
+      if (m === key) {
+        // Estilo activo (Verde)
+        btn.className = 'w-full h-11 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs shadow-sm';
+        btn.innerHTML = '<span>Modelo Seleccionado</span><span class="material-symbols-outlined text-base">check_circle</span>';
+      } else {
+        // Estilo inactivo (Gris)
+        btn.className = 'w-full h-11 rounded-lg bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-lg text-label-lg transition-colors flex items-center justify-center gap-space-xs';
+        btn.innerHTML = '<span>Seleccionar Modelo</span><span class="material-symbols-outlined text-base">check</span>';
+      }
+    });    
     
     // Smooth scroll to configurator section
     const el = document.getElementById('configurador');
