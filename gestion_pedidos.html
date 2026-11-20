@@ -712,15 +712,37 @@
   }
 
   function triggerOrderCompletion() {
-    const qty = document.getElementById('product-qty').value;
-    const total = document.getElementById('summary-total').textContent;
+    const cliente = document.getElementById('buyer-fullname')?.value.trim() || 'Cliente Corporativo';
+    const correo = document.getElementById('buyer-email')?.value.trim() || '';
+    const ciudad = document.getElementById('shipping-city')?.value.trim() || '';
+    const qty = parseInt(document.getElementById('product-qty')?.value) || 1;
+    const finishSelect = document.getElementById('product-finish');
+    const finishText = finishSelect ? finishSelect.options[finishSelect.selectedIndex].text.split('(')[0].trim() : '';
+    const totalTexto = document.getElementById('summary-total')?.textContent || '€ 0,00';
+    const modeloBase = window.modeloSeleccionadoCatalogo || 'Smart Bin IA™ (v4.2)';
+
     const modalUnits = document.getElementById('modal-units-count');
     const modalService = document.getElementById('modal-service-status');
     const modalTotal = document.getElementById('modal-total-amount');
 
-    if (modalUnits) modalUnits.textContent = qty + ' x Smart Bin IA™ (v4.2)';
+    if (modalUnits) modalUnits.textContent = qty + ' x ' + modeloBase;
     if (modalService) modalService.textContent = serviceIncluded ? 'Plan Preventivo Activo (' + (qty * 38) + ' €/mes)' : 'No añadido (Exclusivo Hardware)';
-    if (modalTotal) modalTotal.textContent = total;
+    if (modalTotal) modalTotal.textContent = totalTexto;
+
+    // Guardar registro en localStorage para que crm.html lo muestre
+    const registrosCRM = JSON.parse(localStorage.getItem('ecosphere_crm_ventas')) || [];
+    const nuevaVenta = {
+      id: 'ECO-' + Math.floor(1000 + Math.random() * 9000),
+      cliente: cliente,
+      empresa: ciudad ? `${correo} · ${ciudad}` : correo,
+      modelo: `${modeloBase} (${qty} u., ${finishText})`,
+      montoTexto: totalTexto,
+      estado: serviceIncluded ? 'Cerrado + Mant.' : 'Cerrado / Pagado',
+      fecha: new Date().toLocaleDateString('es-ES')
+    };
+
+    registrosCRM.unshift(nuevaVenta);
+    localStorage.setItem('ecosphere_crm_ventas', JSON.stringify(registrosCRM));
 
     const dialog = document.getElementById('confirmation-dialog');
     if (dialog) {
@@ -733,7 +755,7 @@
   function closeConfirmationDialog() {
     const dialog = document.getElementById('confirmation-dialog');
     if (dialog) dialog.classList.add('hidden');
-    goToStep(1);
+    window.location.href = 'crm.html';
   }
 
   function saveQuoteDraft() {
@@ -751,6 +773,22 @@
 
   // Initial run
   document.addEventListener('DOMContentLoaded', () => {
+    const pedidoGuardado = localStorage.getItem('ecosphere_pedido_actual');
+    if (pedidoGuardado) {
+      try {
+        const datos = JSON.parse(pedidoGuardado);
+        const qtyInput = document.getElementById('product-qty');
+        if (qtyInput && datos.units) {
+          qtyInput.value = datos.units;
+        }
+        // Guardamos el nombre del modelo elegido por si lo queremos mostrar en el modal o CRM
+        if (datos.modelName) {
+          window.modeloSeleccionadoCatalogo = datos.modelName;
+        }
+      } catch (e) {
+        console.warn('No se pudo leer el pedido del catálogo:', e);
+      }
+    }
     updateCalculations();
   });
 </script></main></div></body></html>
