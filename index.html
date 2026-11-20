@@ -691,15 +691,17 @@
   }
 
   function triggerCheckoutRedirect() {
-    const checkoutUrl = '?view=gestion-de-pedidos-checkout&model=' + encodeURIComponent(currentConfig.modelKey) +
-      '&units=' + currentConfig.units + 
-      '&maint=' + currentConfig.maintenancePerUnit;
+    // 1. Calculamos el total final actual
+   let subtotal = currentConfig.basePrice * currentConfig.units;
+   if (currentConfig.units >= 5) {
+    subtotal = subtotal * 0.88; // Descuento del 12%
+  }
+  currentConfig.totalPrice = Math.round(subtotal);
 
-    const navLink = document.querySelector('nav a[data-path="gestion-de-pedidos-checkout"]');
-    if (navLink) {
-      navLink.click();
-    } else {
-      window.location.search = 'path=gestion-de-pedidos-checkout';
-    }
+  // 2. Guardamos la configuración en localStorage para que otra página la lea
+  localStorage.setItem('ecosphere_pedido_actual', JSON.stringify(currentConfig));
+
+  // 3. Redirigimos a gestión de pedidos
+  window.location.href = 'gestion_pedidos.html';
   }
 </script></main></div></body></html>
