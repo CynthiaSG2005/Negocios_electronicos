@@ -517,14 +517,136 @@
 </section>
 </div>
 <script>
-  // Filter pill interaction & dynamic updates
+  // Base de datos inicial de clientes
+  const clientData = {
+    'CL-9021': {
+      name: 'Hospital Ángeles Metropolitano',
+      id: 'CL-9021 • Cuenta Platinum',
+      bins: '14 Unidades'
+    },
+    'CL-8442': {
+      name: 'Universidad Tecnológica del Valle',
+      id: 'CL-8442 • Sector Educativo',
+      bins: '28 Unidades'
+    },
+    'CL-7210': {
+      name: 'GreenHub Cowork Polanco',
+      id: 'CL-7210 • Cuenta Corporativa',
+      bins: '6 Unidades'
+    },
+    'CL-6119': {
+      name: 'Operadora Logística Tlalnepantla',
+      id: 'CL-6119 • Industrial & Logística',
+      bins: '10 Unidades'
+    }
+  };
+
+  // 1. Cargar ventas guardadas desde localStorage e insertarlas en #clients-container
+  function cargarVentasGuardadas() {
+    const registrosCRM = JSON.parse(localStorage.getItem('ecosphere_crm_ventas')) || [];
+    const container = document.getElementById('clients-container');
+    const resultsCount = document.getElementById('results-count');
+
+    if (!container || registrosCRM.length === 0) return;
+
+    // Insertar en orden inverso para que la más reciente quede hasta arriba
+    [...registrosCRM].reverse().forEach(venta => {
+      const hasMaint = venta.tieneMantenimiento ? 'true' : 'false';
+      const badgeMaint = venta.tieneMantenimiento
+        ? `<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+             <span aria-hidden="true" class="material-symbols-outlined text-xs">verified_user</span> Mantenimiento Activo (SLA 4h)
+           </span>`
+        : `<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+             <span aria-hidden="true" class="material-symbols-outlined text-xs">do_not_disturb_on</span> Solo Hardware
+           </span>`;
+
+      const article = document.createElement('article');
+      article.className = 'client-row bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md focus:shadow-md focus:outline-none focus:bg-surface-container-low transition-all cursor-pointer relative border-l-4 border-primary';
+      article.setAttribute('data-client-id', venta.id);
+      article.setAttribute('data-has-maintenance', hasMaint);
+      article.setAttribute('data-pending', 'true');
+      article.setAttribute('data-verified', 'true');
+      article.setAttribute('role', 'article');
+      article.setAttribute('tabindex', '0');
+
+      article.innerHTML = `
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+          <div class="flex items-start gap-space-md">
+            <div class="w-12 h-12 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary flex-shrink-0">
+              <span aria-hidden="true" class="material-symbols-outlined text-2xl">new_releases</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <div class="flex items-center gap-space-xs flex-wrap">
+                <h2 class="font-title-md text-title-md text-on-surface font-semibold truncate">${venta.cliente}</h2>
+                <span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">
+                  <span aria-hidden="true" class="material-symbols-outlined text-xs">verified</span> Nuevo Registro
+                </span>
+                ${badgeMaint}
+              </div>
+              <div class="flex flex-wrap items-center gap-y-1 gap-x-space-md mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                <span class="flex items-center gap-1 text-on-surface font-medium">
+                  <span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">mail</span> ${venta.correo || 'Sin correo'}
+                </span>
+                <span class="flex items-center gap-1">
+                  <span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">call</span> ${venta.telefono}
+                </span>
+                <span class="flex items-center gap-1">
+                  <span aria-hidden="true" class="material-symbols-outlined text-sm text-outline">location_on</span> ${venta.direccion}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0 pt-space-xs md:pt-0">
+            <div class="text-left md:text-right">
+              <div class="flex items-center md:justify-end gap-1 text-primary font-label-lg text-label-lg">
+                <span class="material-symbols-outlined text-lg">delete_sweep</span>
+                <span>${venta.cantidad} Smart Bins IA</span>
+              </div>
+              <span class="font-label-sm text-label-sm text-outline">${venta.modelo} • ${venta.montoTexto}</span>
+            </div>
+            <button aria-label="Ver ficha detallada" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" type="button">
+              <span aria-hidden="true" class="material-symbols-outlined text-xl">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="mt-space-md pt-space-sm bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-sm text-primary">accessible</span>
+            <span>Orden generada desde Checkout B2B/B2C • Acabado: ${venta.acabado || 'Estándar'}</span>
+          </div>
+          <div class="flex items-center gap-space-md">
+            <span class="text-primary font-medium">Registrado: ${venta.fecha}</span>
+            <span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-semibold">ID: ${venta.id}</span>
+          </div>
+        </div>
+      `;
+
+      // Guardar en el diccionario para el panel derecho
+      clientData[venta.id] = {
+        name: venta.cliente,
+        id: `${venta.id} • Nuevo Cliente Checkout`,
+        bins: `${venta.cantidad} Unidades`
+      };
+
+      container.prepend(article);
+    });
+
+    if (resultsCount) {
+      const totalVisible = document.querySelectorAll('.client-row').length;
+      resultsCount.textContent = `Mostrando ${totalVisible} clientes clave`;
+    }
+  }
+
+  // Ejecutar carga antes de asignar eventos
+  cargarVentasGuardadas();
+
+  // 2. Filtros y selección de tarjetas
   const filterPills = document.querySelectorAll('.filter-pill');
   const clientRows = document.querySelectorAll('.client-row');
   const resultsCount = document.getElementById('results-count');
 
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
-      // Toggle visual active state
       filterPills.forEach(p => {
         p.classList.remove('bg-primary', 'text-on-primary', 'active');
         p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
@@ -537,24 +659,14 @@
 
       clientRows.forEach(row => {
         let match = false;
-        if (filterType === 'all') {
-          match = true;
-        } else if (filterType === 'with-maintenance') {
-          match = row.getAttribute('data-has-maintenance') === 'true';
-        } else if (filterType === 'without-maintenance') {
-          match = row.getAttribute('data-has-maintenance') === 'false';
-        } else if (filterType === 'verified-address') {
-          match = row.getAttribute('data-verified') === 'true';
-        } else if (filterType === 'pending-dispatch') {
-          match = row.getAttribute('data-pending') === 'true';
-        }
+        if (filterType === 'all') match = true;
+        else if (filterType === 'with-maintenance') match = row.getAttribute('data-has-maintenance') === 'true';
+        else if (filterType === 'without-maintenance') match = row.getAttribute('data-has-maintenance') === 'false';
+        else if (filterType === 'verified-address') match = row.getAttribute('data-verified') === 'true';
+        else if (filterType === 'pending-dispatch') match = row.getAttribute('data-pending') === 'true';
 
-        if (match) {
-          row.style.display = 'block';
-          visible++;
-        } else {
-          row.style.display = 'none';
-        }
+        row.style.display = match ? 'block' : 'none';
+        if (match) visible++;
       });
 
       if (resultsCount) {
@@ -562,54 +674,6 @@
       }
     });
   });
-
-  // Client row selection updating the right drawer
-  const clientData = {
-    'CL-9021': {
-      name: 'Hospital Ángeles Metropolitano',
-      id: 'CL-9021 • Cuenta Platinum',
-      contact: 'Dra. Claudia Fuentes V.',
-      role: 'Directora de Operaciones & ESG',
-      email: 'compras.medicas@angeles-metro.mx',
-      phone: '+52 (55) 5424-7200 ext. 410',
-      address: 'Vialidad de la Barranca 24, Edificio Central, Huixquilucan, Edo. Méx., C.P. 52763',
-      bins: '14 Unidades',
-      capacity: '73.4% Prom.'
-    },
-    'CL-8442': {
-      name: 'Universidad Tecnológica del Valle',
-      id: 'CL-8442 • Sector Educativo',
-      contact: 'Ing. Mateo Sandoval',
-      role: 'Coordinador de Infraestructura Verde',
-      email: 'sustentabilidad@utvalle.edu.mx',
-      phone: '+52 (55) 7890-1122',
-      address: 'Av. Instituto Politécnico 3400, Gustavo A. Madero, CDMX, C.P. 07360',
-      bins: '28 Unidades',
-      capacity: '41.2% Prom.'
-    },
-    'CL-7210': {
-      name: 'GreenHub Cowork Polanco',
-      id: 'CL-7210 • Cuenta Corporativa',
-      contact: 'Lic. Sandra Morales',
-      role: 'Jefa de Workplace & Facilities',
-      email: 'facilities@greenhub-mex.io',
-      phone: '+52 (55) 9138-0050',
-      address: 'Campos Elíseos 204, Polanco V Sección, Miguel Hidalgo, CDMX, C.P. 11560',
-      bins: '6 Unidades',
-      capacity: '88.1% Prom.'
-    },
-    'CL-6119': {
-      name: 'Operadora Logística Tlalnepantla',
-      id: 'CL-6119 • Industrial & Logística',
-      contact: 'Armando Carrillo R.',
-      role: 'Gerente General de Planta',
-      email: 'compras@oplogistica-mex.com',
-      phone: '+52 (55) 5390-8800',
-      address: 'Vía Dr. Gustavo Baz 2160, Tlalnepantla de Baz, Edo. Méx., C.P. 54000',
-      bins: '10 Unidades',
-      capacity: '62.0% Prom.'
-    }
-  };
 
   clientRows.forEach(row => {
     row.addEventListener('click', () => {
@@ -622,12 +686,10 @@
       if (nameEl) nameEl.textContent = data.name;
       if (idEl) idEl.textContent = `ID Cliente: ${data.id}`;
 
-      // Visual outline highlight
       clientRows.forEach(r => r.classList.remove('bg-surface-container-high'));
       row.classList.add('bg-surface-container-high');
     });
 
-    // Keyboard navigation accessibility
     row.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -635,6 +697,14 @@
       }
     });
   });
+
+  // Botón "Registrar Nueva Venta / Pedido" redirige a gestion_pedidos.html
+  const newSaleBtn = document.getElementById('btn-new-sale');
+  if (newSaleBtn) {
+    newSaleBtn.addEventListener('click', () => {
+      window.location.href = 'gestion_pedidos.html';
+    });
+  }
 
   // Export BI feedback
   const exportBtn = document.getElementById('btn-export-bi');
