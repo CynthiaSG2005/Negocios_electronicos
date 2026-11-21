@@ -714,6 +714,8 @@
   function triggerOrderCompletion() {
     const cliente = document.getElementById('buyer-fullname')?.value.trim() || 'Cliente Corporativo';
     const correo = document.getElementById('buyer-email')?.value.trim() || '';
+    const telefono = document.getElementById('buyer-phone')?.value.trim() || '+52 (55) 0000-0000';
+    const direccion = document.getElementById('shipping-address')?.value.trim() || '';
     const ciudad = document.getElementById('shipping-city')?.value.trim() || '';
     const qty = parseInt(document.getElementById('product-qty')?.value) || 1;
     const finishSelect = document.getElementById('product-finish');
