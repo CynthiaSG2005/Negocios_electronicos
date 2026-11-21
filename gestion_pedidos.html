@@ -398,7 +398,7 @@
 <!-- Smart Bin Base Item -->
 <div class="flex justify-between items-start gap-space-sm">
 <div>
-<span class="font-title-md text-title-md text-on-surface block leading-tight">Smart Bin IA™ (v4.2)</span>
+<span id="summary-product-title" class="font-title-md text-title-md text-on-surface block leading-tight">Smart Bin IA™ (v4.2)</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant" id="summary-hardware-desc">2 unidades · Chasis Verde Bosque</span>
 </div>
 <span class="font-title-md text-title-md text-on-surface font-semibold whitespace-nowrap" id="summary-hardware-price">€ 2.380,00</span>
@@ -526,7 +526,7 @@
 <script>
   let currentStep = 1;
   let serviceIncluded = false;
-  const UNIT_PRICE = 1190.00;
+  let unitPrice = 2890.00;
   const SERVICE_PRICE_PER_UNIT = 38.00;
   let shippingCost = 45.00;
 
@@ -645,7 +645,7 @@
     const finishSelect = document.getElementById('product-finish');
     const finishLabel = finishSelect.options[finishSelect.selectedIndex].text.split('(')[0];
 
-    const hardwareTotal = qty * UNIT_PRICE;
+    const hardwareTotal = qty * unitPrice;
     const serviceTotalMonthly = serviceIncluded ? (qty * SERVICE_PRICE_PER_UNIT) : 0;
 
     const subtotal = hardwareTotal + shippingCost;
@@ -787,14 +787,17 @@
         if (qtyInput && datos.units) {
           qtyInput.value = datos.units;
         }
+        if (datos.basePrice) unitPrice = Number(datos.basePrice);
         // Guardamos el nombre del modelo elegido por si lo queremos mostrar en el modal o CRM
         if (datos.modelName) {
           window.modeloSeleccionadoCatalogo = datos.modelName;
+          const titleEl = document.getElementById('summary-product-title');
+          if (titleEl) titleEl.textContent = datos.modelName;
         }
       } catch (e) {
         console.warn('No se pudo leer el pedido del catálogo:', e);
       }
-    }
+    } 
     updateCalculations();
   });
 </script></main></div></body></html>
