@@ -732,15 +732,19 @@
     // Guardar registro en localStorage para que crm.html lo muestre
     const registrosCRM = JSON.parse(localStorage.getItem('ecosphere_crm_ventas')) || [];
     const nuevaVenta = {
-      id: 'ECO-' + Math.floor(1000 + Math.random() * 9000),
+      id: 'CL-' + Math.floor(1000 + Math.random() * 9000),
       cliente: cliente,
-      empresa: ciudad ? `${correo} · ${ciudad}` : correo,
-      modelo: `${modeloBase} (${qty} u., ${finishText})`,
+      correo: correo,
+      telefono: telefono,
+      direccion: ciudad ? `${direccion}, ${ciudad}` : direccion,
+      cantidad: qty,
+      modelo: modeloBase,
+      acabado: finishText,
       montoTexto: totalTexto,
-      estado: serviceIncluded ? 'Cerrado + Mant.' : 'Cerrado / Pagado',
+      tieneMantenimiento: serviceIncluded,
       fecha: new Date().toLocaleDateString('es-ES')
     };
-
+   
     registrosCRM.unshift(nuevaVenta);
     localStorage.setItem('ecosphere_crm_ventas', JSON.stringify(registrosCRM));
 
